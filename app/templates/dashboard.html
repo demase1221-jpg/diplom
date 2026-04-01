@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Мои QR</title>
+</head>
+<body>
+
+<h2>Мои QR-коды</h2>
+
+<a href="/qr">Создать новый QR</a>
+<br><br>
+<a href="/logout">Выйти</a>
+
+<hr>
+
+{% for qr in qrcodes %}
+    <div>
+        <p>{{ qr.link }}</p>
+        <img src="/static/{{ qr.image }}" width="150">
+        <br>
+        <a href="/delete/{{ qr.id }}">Удалить</a>
+    </div>
+    <hr>
+{% endfor %}
+
+</body>
+</html>
