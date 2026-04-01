@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Вход</title>
+</head>
+<body>
+
+<h2>Вход</h2>
+
+{% if error %}
+<p style="color:red;">{{ error }}</p>
+{% endif %}
+
+<form method="POST">
+    <input name="username" placeholder="Логин">
+    <input name="password" type="password" placeholder="Пароль">
+    <button type="submit">Войти</button>
+</form>
+
+<a href="/register">Нет аккаунта?</a>
+
+</body>
+</html>
